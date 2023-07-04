@@ -1,0 +1,29 @@
+.Header {
+    width: 100%;
+    height: 77px;
+    background-color: #444444;
+    margin-bottom: 10px;
+    box-shadow:0px 5px 10px #77119f;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.textBox {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.logo {
+    font-size: 26px;
+    padding: 20px 0 0 0;
+    font-weight: 500;
+    color: #fff;
+    filter:
+    drop-shadow(7px 7px 5px #77119f)
+}
