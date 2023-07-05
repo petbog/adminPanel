@@ -1,24 +1,26 @@
-import { useState } from 'react'
-import DatePicker from "react-multi-date-picker"
+import { useEffect, useState } from 'react'
 import s from './AdminPanel.module.css'
 
 const AdminPanel = () => {
-    const [year, SetYear] = useState('')
-    const [month, SetMonth] = useState([])
-    const [day, SetDay] = useState([])
-    const [hour, SetHour] = useState([])
-    const [minutes, SetMinutes] = useState([])
-    const today = new Date()
-    const tomorrow = new Date()
-    tomorrow.setDate(tomorrow.getDate() + 1)
-    const [values, setValues] = useState([today, tomorrow])
-    // console.log(year)
-    // console.log(day)
-    // console.log(month)
-    // console.log(hour)
-    // console.log(days)
-    const days = values.map((item) => item.day)
+    const [years, SetYear] = useState('')
+    const [months, SetMonth] = useState({})
+    const [dayse, SetDay] = useState({})
+    const [hours, SetHour] = useState({})
+    const [minut, SetMinutes] = useState({})
+    const [cron, setCrone] = useState({})
+    console.log(cron)
 
+    useEffect(() => {
+        setCrone(
+            {
+                year: years,
+                month: months,
+                timeMonth: minut,
+                day: dayse,
+                hour: hours,
+            }
+        )
+    }, [years,months,minut,dayse,hours])
     const whenYear = ['Год', 'Месяц', 'День', 'Час']
     const whenMonth = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Ноябрю', 'Декабрь']
     const whenDay = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье',]
@@ -120,14 +122,7 @@ const AdminPanel = () => {
                     </select>
                 </div>
                 <div className={s.calendar}>
-                    <p className={s.title}>Выберите дату</p>
-                    <div className={s.date}>
-                        <DatePicker
-                            multiple
-                            value={values}
-                            onChange={setValues}
-                        />
-                    </div>
+                    <p className={s.title}>Ваша дата </p>
 
                 </div>
 
