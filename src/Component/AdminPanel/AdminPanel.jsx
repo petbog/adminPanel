@@ -127,32 +127,32 @@ const AdminPanel = () => {
                     <p className={s.title}>Ваша дата </p>
                     {
                         item.map(({ day, hour, month, timeMonth, year }, i) =>
-                            <div className="">
+                            <div className={s.itemContainer}>
                                 <p className="">{year}</p>
                                 <div className="">
                                     {
-                                        month.map((item, i) => <div key={i}>
+                                        month.length && month.map((item, i) => <div key={i}>
                                             <span>{item}</span>
                                         </div>)
                                     }
                                 </div>
                                 <div className="">
                                     {
-                                        day.map((item, i) => <div key={i}>
+                                      day.length &&  day.map((item, i) => <div key={i}>
                                             <span>{item}</span>
                                         </div>)
                                     }
                                 </div>
                                 <div className="">
                                     {
-                                        hour.map((item, i) => <div key={i}>
+                                       hour.length && hour.map((item, i) => <div key={i}>
                                             <span>{item}</span>
                                         </div>)
                                     }
                                 </div>
                                 <div className="">
                                     {
-                                        timeMonth.map((item, i) => <div key={i}>
+                                       timeMonth.length && timeMonth.map((item, i) => <div key={i}>
                                             <span>{item}</span>
                                         </div>)
                                     }

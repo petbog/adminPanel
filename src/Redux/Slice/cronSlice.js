@@ -2,7 +2,16 @@ import { createSlice } from "@reduxjs/toolkit"
 
 
 const initialState = {
-    item: []
+    item: [
+        {
+            year: '',
+            month: [],
+            timeMonth: [],
+            day: [],
+            hour: [],
+        }
+    ]
+
 }
 
 
