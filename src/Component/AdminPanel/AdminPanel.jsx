@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import s from './AdminPanel.module.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { addCron, selectCron } from '../../Redux/Slice/cronSlice'
 
 const AdminPanel = () => {
     const [years, SetYear] = useState('')
@@ -7,20 +9,20 @@ const AdminPanel = () => {
     const [dayse, SetDay] = useState({})
     const [hours, SetHour] = useState({})
     const [minut, SetMinutes] = useState({})
-    const [cron, setCrone] = useState({})
-    console.log(cron)
+    const { item } = useSelector(selectCron)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        setCrone(
-            {
+        dispatch(addCron(
+            [{
                 year: years,
                 month: months,
                 timeMonth: minut,
                 day: dayse,
                 hour: hours,
-            }
+            }])
         )
-    }, [years,months,minut,dayse,hours])
+    }, [dispatch, years, months, minut, dayse, hours])
     const whenYear = ['Год', 'Месяц', 'День', 'Час']
     const whenMonth = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Ноябрю', 'Декабрь']
     const whenDay = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье',]
@@ -123,7 +125,43 @@ const AdminPanel = () => {
                 </div>
                 <div className={s.calendar}>
                     <p className={s.title}>Ваша дата </p>
+                    {
+                        item.map(({ day, hour, month, timeMonth, year }, i) =>
+                            <div className="">
+                                <p className="">{year}</p>
+                                <div className="">
+                                    {
+                                        month.map((item, i) => <div key={i}>
+                                            <span>{item}</span>
+                                        </div>)
+                                    }
+                                </div>
+                                <div className="">
+                                    {
+                                        day.map((item, i) => <div key={i}>
+                                            <span>{item}</span>
+                                        </div>)
+                                    }
+                                </div>
+                                <div className="">
+                                    {
+                                        hour.map((item, i) => <div key={i}>
+                                            <span>{item}</span>
+                                        </div>)
+                                    }
+                                </div>
+                                <div className="">
+                                    {
+                                        timeMonth.map((item, i) => <div key={i}>
+                                            <span>{item}</span>
+                                        </div>)
+                                    }
+                                </div>
 
+                            </div>
+
+                        )
+                    }
                 </div>
 
             </div>
