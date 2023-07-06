@@ -9,6 +9,8 @@ const initialState = {
             timeMonth: [],
             day: [],
             hour: [],
+            startDate: 0,
+            endDate: 0
         }
     ]
 
