@@ -109,13 +109,6 @@
 }
 
 
-.title {
-    color: #fff;
-    font-size: 21px;
-    font-weight: 400;
-
-}
-
 .date {
     margin: 25px 0 0 0;
 }
@@ -148,3 +141,202 @@
     box-shadow:6px 6px 10px #77119f;
     background-color: #d3bfbf;
 }
+.title {
+    height: 24px;
+    width: 27ch;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    filter:
+    drop-shadow(7px 7px 5px #77119f);
+    border-right: 4px solid #77119f;
+    animation: flashing-border 0.75s step-end infinite,
+    printed-text 5s steps(27);
+}
+@keyframes flashing-border {
+    0% {
+        border-color: #77119f;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #77119f;
+    }
+}
+@keyframes printed-text{
+    from{
+        width: 0;
+    }
+}
+.month_title {
+    height: 24px;
+    width: 14ch;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    filter:
+    drop-shadow(7px 7px 5px #77119f);
+    border-right: 4px solid #77119f;
+    animation: flashing-border 0.75s step-end infinite,
+    printed-text 5s steps(14);
+}
+@keyframes flashing-border {
+    0% {
+        border-color: #77119f;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #77119f;
+    }
+}
+@keyframes printed-text{
+    from{
+        width: 0;
+    }
+}
+.day_title {
+    height: 24px;
+    width: 20ch;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    filter:
+    drop-shadow(7px 7px 5px #77119f);
+    border-right: 4px solid #77119f;
+    animation: flashing-border 0.75s step-end infinite,
+    printed-text 5s steps(20);
+}
+@keyframes flashing-border {
+    0% {
+        border-color: #77119f;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #77119f;
+    }
+}
+@keyframes printed-text{
+    from{
+        width: 0;
+    }
+}
+.hour_title {
+    height: 24px;
+    width: 12ch;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    filter:
+    drop-shadow(7px 7px 5px #77119f);
+    border-right: 4px solid #77119f;
+    animation: flashing-border 0.75s step-end infinite,
+    printed-text 5s steps(12);
+}
+@keyframes flashing-border {
+    0% {
+        border-color: #77119f;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #77119f;
+    }
+}
+@keyframes printed-text{
+    from{
+        width: 0;
+    }
+}
+.minutes_title {
+    height: 24px;
+    width: 15ch;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    filter:
+    drop-shadow(7px 7px 5px #77119f);
+    border-right: 4px solid #77119f;
+    animation: flashing-border 0.75s step-end infinite,
+    printed-text 5s steps(15);
+}
+@keyframes flashing-border {
+    0% {
+        border-color: #77119f;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #77119f;
+    }
+}
+@keyframes printed-text{
+    from{
+        width: 0;
+    }
+}
+.calendar_title {
+    height: 24px;
+    width: 9ch;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    filter:
+    drop-shadow(7px 7px 5px #77119f);
+    border-right: 4px solid #77119f;
+    animation: flashing-border 0.75s step-end infinite,
+    printed-text 5s steps(9);
+}
+@keyframes flashing-border {
+    0% {
+        border-color: #77119f;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #77119f;
+    }
+}
+@keyframes printed-text{
+    from{
+        width: 0;
+    }
+}
+

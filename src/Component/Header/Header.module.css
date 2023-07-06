@@ -3,7 +3,7 @@
     height: 77px;
     background-color: #444444;
     margin-bottom: 10px;
-    box-shadow:0px 5px 10px #77119f;
+    box-shadow: 0px 5px 10px #77119f;
     margin-bottom: 40px;
 }
 
@@ -20,10 +20,36 @@
 }
 
 .logo {
+    width: 11ch;
     font-size: 26px;
-    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
     font-weight: 500;
     color: #fff;
     filter:
-    drop-shadow(7px 7px 5px #77119f)
+        drop-shadow(7px 7px 5px #77119f);
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #77119f;
+    animation: flashing-border 0.75s step-end infinite,
+    printed-text 5s steps(11);
+}
+
+@keyframes flashing-border {
+    0% {
+        border-color: #77119f;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #77119f;
+    }
+}
+@keyframes printed-text{
+    from{
+        width: 0;
+    }
 }

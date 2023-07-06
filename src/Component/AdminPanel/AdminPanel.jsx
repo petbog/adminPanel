@@ -99,7 +99,7 @@ const AdminPanel = () => {
                     </select>
                 </div>
                 <div className={s.month}>
-                    <p className={s.title}>Выберите месяц</p>
+                    <p className={s.month_title}>Выберите месяц</p>
                     <select className={s.monthSelect} multiple name="month" onChange={handleMonth}>
                         {
                             whenMonth.map((item, i) =>
@@ -109,7 +109,7 @@ const AdminPanel = () => {
                     </select>
                 </div>
                 <div className={s.day}>
-                    <p className={s.title}>Выберите день недели</p>
+                    <p className={s.day_title}>Выберите день недели</p>
                     <select className={s.daySelect} multiple name="day" onChange={handleDay}>
                         {
                             whenDay.map((item, i) =>
@@ -119,7 +119,7 @@ const AdminPanel = () => {
                     </select>
                 </div>
                 <div className={s.hour}>
-                    <p className={s.title}>Выберите час</p>
+                    <p className={s.hour_title}>Выберите час</p>
                     <select className={s.hourSelect} multiple name="hour" onChange={handleHour}>
                         {
                             whenHour.map((item, i) =>
@@ -129,7 +129,7 @@ const AdminPanel = () => {
                     </select>
                 </div>
                 <div className={s.minutes}>
-                    <p className={s.title}>Выберите минуту</p>
+                    <p className={s.minutes_title}>Выберите минуту</p>
                     <select className={s.minutesSelect} multiple name="minutes" onChange={handleMinutes}>
                         {
                             whereMinutes.map((item, i) =>
@@ -149,7 +149,7 @@ const AdminPanel = () => {
                     />
                 </div>
                 <div className={s.calendar}>
-                    <p className={s.title}>Ваша дата </p>
+                    <p className={s.calendar_title}>Ваша дата </p>
                     {
                         item.map(({ day, hour, month, timeMonth, year, startDate, endDate }, i) =>
                             <div key={i} className={s.itemContainer}>
