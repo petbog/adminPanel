@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
     item: [
         {
+            value:'',
             year: '',
             month: [],
             timeMonth: [],

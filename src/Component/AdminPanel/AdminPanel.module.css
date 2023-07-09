@@ -36,16 +36,18 @@
     text-align: center;
     border-radius: 6px;
 }
+
 .daySelect::-webkit-scrollbar {
     width: 0;
-  }
+}
+
 .hour {
     display: flex;
     justify-content: space-between;
     max-width: 760px;
     margin: 0 auto;
     height: 200px;
-    
+
 }
 
 .hourSelect {
@@ -54,9 +56,11 @@
     border-radius: 10px;
     text-align: center;
 }
+
 .hourSelect::-webkit-scrollbar {
     width: 0;
-  }
+}
+
 .month {
     display: flex;
     justify-content: space-between;
@@ -72,9 +76,10 @@
     text-align: center;
     border-radius: 5px;
 }
+
 .monthSelect::-webkit-scrollbar {
     width: 0;
-  }
+}
 
 .minutes {
     display: flex;
@@ -90,9 +95,10 @@
     text-align: center;
     border-radius: 10px;
 }
+
 .minutesSelect::-webkit-scrollbar {
     width: 0;
-  }
+}
 
 .calendar {
     display: flex;
@@ -106,16 +112,62 @@
     padding: 5px 13px;
     border-radius: 10px;
     height: auto;
+    flex-wrap: wrap;
 }
 
+.inputBox {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+    position: relative;
+}
+.inputClose{
+    position: absolute;
+    top: 1px;
+    right: 105px;
+    width: 40px;
+    cursor: pointer;
+}
+.pencil{
+    width: 24px;
+    position: absolute;
+    top: 9px;
+    left: 113px;
+}
+
+.inputItem {
+    width: 600px;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 19px;
+    padding: 0 50px 0 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
 
 .date {
     margin: 25px 0 0 0;
 }
 
 .itemContainer {
-    display: contents;
+    display: flex;
+    flex-direction: column;
 
+}
+
+.boxText {
+    width: 100%;
+    min-height: 50px;
+}
+
+.infoBox {
+    display: flex;
+}
+
+.itemBox {
+    width: 126px;
+    height: auto;
 }
 
 .dataPic {
@@ -123,12 +175,14 @@
     justify-content: space-around;
     margin: 0 0 29px 0;
 }
-.buttonbox{
+
+.buttonbox {
     display: flex;
     justify-content: center;
     margin: 30px 0 30px 0px;
 }
-.saveButton{
+
+.saveButton {
     padding: 10px 16px;
     border-radius: 10px;
     font-size: 15px;
@@ -136,11 +190,13 @@
     background-color: #fff;
     cursor: pointer;
 }
-.saveButton:hover{
+
+.saveButton:hover {
     transition: all 0.3s;
-    box-shadow:6px 6px 10px #77119f;
+    box-shadow: 6px 6px 10px #77119f;
     background-color: #d3bfbf;
 }
+
 .title {
     height: 24px;
     width: 27ch;
@@ -151,11 +207,12 @@
     white-space: nowrap;
     overflow: hidden;
     filter:
-    drop-shadow(7px 7px 5px #77119f);
+        drop-shadow(7px 7px 5px #77119f);
     border-right: 4px solid #77119f;
     animation: flashing-border 0.75s step-end infinite,
-    printed-text 5s steps(27);
+        printed-text 5s steps(27);
 }
+
 @keyframes flashing-border {
     0% {
         border-color: #77119f;
@@ -169,11 +226,13 @@
         border-color: #77119f;
     }
 }
-@keyframes printed-text{
-    from{
+
+@keyframes printed-text {
+    from {
         width: 0;
     }
 }
+
 .month_title {
     height: 24px;
     width: 14ch;
@@ -184,11 +243,12 @@
     white-space: nowrap;
     overflow: hidden;
     filter:
-    drop-shadow(7px 7px 5px #77119f);
+        drop-shadow(7px 7px 5px #77119f);
     border-right: 4px solid #77119f;
     animation: flashing-border 0.75s step-end infinite,
-    printed-text 5s steps(14);
+        printed-text 5s steps(14);
 }
+
 @keyframes flashing-border {
     0% {
         border-color: #77119f;
@@ -202,11 +262,13 @@
         border-color: #77119f;
     }
 }
-@keyframes printed-text{
-    from{
+
+@keyframes printed-text {
+    from {
         width: 0;
     }
 }
+
 .day_title {
     height: 24px;
     width: 20ch;
@@ -217,11 +279,12 @@
     white-space: nowrap;
     overflow: hidden;
     filter:
-    drop-shadow(7px 7px 5px #77119f);
+        drop-shadow(7px 7px 5px #77119f);
     border-right: 4px solid #77119f;
     animation: flashing-border 0.75s step-end infinite,
-    printed-text 5s steps(20);
+        printed-text 5s steps(20);
 }
+
 @keyframes flashing-border {
     0% {
         border-color: #77119f;
@@ -235,11 +298,13 @@
         border-color: #77119f;
     }
 }
-@keyframes printed-text{
-    from{
+
+@keyframes printed-text {
+    from {
         width: 0;
     }
 }
+
 .hour_title {
     height: 24px;
     width: 12ch;
@@ -250,11 +315,12 @@
     white-space: nowrap;
     overflow: hidden;
     filter:
-    drop-shadow(7px 7px 5px #77119f);
+        drop-shadow(7px 7px 5px #77119f);
     border-right: 4px solid #77119f;
     animation: flashing-border 0.75s step-end infinite,
-    printed-text 5s steps(12);
+        printed-text 5s steps(12);
 }
+
 @keyframes flashing-border {
     0% {
         border-color: #77119f;
@@ -268,11 +334,13 @@
         border-color: #77119f;
     }
 }
-@keyframes printed-text{
-    from{
+
+@keyframes printed-text {
+    from {
         width: 0;
     }
 }
+
 .minutes_title {
     height: 24px;
     width: 15ch;
@@ -283,11 +351,12 @@
     white-space: nowrap;
     overflow: hidden;
     filter:
-    drop-shadow(7px 7px 5px #77119f);
+        drop-shadow(7px 7px 5px #77119f);
     border-right: 4px solid #77119f;
     animation: flashing-border 0.75s step-end infinite,
-    printed-text 5s steps(15);
+        printed-text 5s steps(15);
 }
+
 @keyframes flashing-border {
     0% {
         border-color: #77119f;
@@ -301,11 +370,13 @@
         border-color: #77119f;
     }
 }
-@keyframes printed-text{
-    from{
+
+@keyframes printed-text {
+    from {
         width: 0;
     }
 }
+
 .calendar_title {
     height: 24px;
     width: 9ch;
@@ -316,11 +387,12 @@
     white-space: nowrap;
     overflow: hidden;
     filter:
-    drop-shadow(7px 7px 5px #77119f);
+        drop-shadow(7px 7px 5px #77119f);
     border-right: 4px solid #77119f;
     animation: flashing-border 0.75s step-end infinite,
-    printed-text 5s steps(9);
+        printed-text 5s steps(9);
 }
+
 @keyframes flashing-border {
     0% {
         border-color: #77119f;
@@ -334,9 +406,16 @@
         border-color: #77119f;
     }
 }
-@keyframes printed-text{
-    from{
+
+@keyframes printed-text {
+    from {
         width: 0;
     }
 }
 
+.valueBox {
+    width: 635px;
+    height: auto;
+    font-size: 17px;
+    letter-spacing: 0.4px;
+}
