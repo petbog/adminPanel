@@ -1,21 +1,25 @@
-// import { useState } from 'react'
-// import { Cron } from 'react-js-cron'
-// import 'react-js-cron/dist/styles.css'
 
-// const Todo = () => {
-//     const [value, setValue] = useState({
-//         year: '*',
-//         month: '*',
-//         timeMonth: '30',
-//         day: '*',
-//         hour: '5',
-//         timeDay: '1,6'
-//     })
-//     return (
-//         <div className="">
-//             <Cron value={value} setValue={setValue} />
-//         </div>
-//     )
-// }
+import { useSelector } from "react-redux"
+import { selectCron } from "../../Redux/Slice/cronSlice"
 
-// export default Todo
+
+const Todo = () => {
+    const { item } = useSelector(selectCron)
+    // const [storage, setStorage] = useState([])
+
+    // useEffect(() => {
+    //     localStorage && setStorage(JSON.parse(localStorage.getItem('cron')))
+    // }, [])
+    return (
+        <div className="">
+            {item.map((todo, i) => (
+                <div className="">
+                    <p className="">{todo.value}dsgdfgfdzgg</p>
+                </div>
+
+            ))}
+        </div>
+    )
+}
+
+export default Todo

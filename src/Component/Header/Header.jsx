@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import s from './Header.module.css'
 
 
@@ -9,6 +10,9 @@ const Header = () => {
                     <div className={s.logo}>
                         Admin Panel
                     </div>
+                    <nav className="">
+                        <Link to='todo'>Todo</Link>
+                    </nav>
                 </div>
             </div>
 

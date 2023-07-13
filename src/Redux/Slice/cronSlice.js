@@ -2,19 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 
 const initialState = {
-    item: [
-        {
-            value:'',
-            year: '',
-            month: [],
-            timeMonth: [],
-            day: [],
-            hour: [],
-            startDate: 0,
-            endDate: 0
-        }
-    ]
-
+    item: []
 }
 
 
@@ -22,8 +10,8 @@ export const cronSlice = createSlice({
     name: 'cron',
     initialState,
     reducers: {
-        addCron: (state, action) => {
-            state.item = action.payload
+        addCron(state, action){
+            state.item = [...state.item,action.payload]
         }
     }
 })

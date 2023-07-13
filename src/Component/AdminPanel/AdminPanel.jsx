@@ -21,9 +21,30 @@ const AdminPanel = () => {
     const dispatch = useDispatch()
 
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     dispatch(addCron(
+    //         [{
+    //             value: text,
+    //             year: years,
+    //             month: months,
+    //             timeMonth: minut,
+    //             day: dayse,
+    //             hour: hours,
+    //             startDate: startDate && startDate.getDate(),
+    //             endDate: endDate && endDate.getDate(),
+    //         }])
+    //     )
+    // }, [dispatch, startDate, endDate, years, months, minut, dayse, hours, text])
+    const whenYear = ['Год', 'Месяц', 'День', 'Час']
+    const whenMonth = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Ноябрю', 'Декабрь']
+    const whenDay = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье',]
+    const whenHour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+    const whereMinutes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+
+    const handleStorage = () => {
+        // item && localStorage.setItem('cron', JSON.stringify(item));
         dispatch(addCron(
-            [{
+            {
                 value: text,
                 year: years,
                 month: months,
@@ -32,17 +53,8 @@ const AdminPanel = () => {
                 hour: hours,
                 startDate: startDate && startDate.getDate(),
                 endDate: endDate && endDate.getDate(),
-            }])
+            })
         )
-    }, [dispatch, startDate, endDate, years, months, minut, dayse, hours, text])
-    const whenYear = ['Год', 'Месяц', 'День', 'Час']
-    const whenMonth = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Ноябрю', 'Декабрь']
-    const whenDay = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье',]
-    const whenHour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
-    const whereMinutes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
-
-    const handleStorage = () => {
-        item && localStorage.setItem('cron', JSON.stringify(item));
     }
     const onChange = (dates) => {
         const [start, end] = dates;
@@ -226,7 +238,7 @@ const AdminPanel = () => {
                 </div>
 
                 <div className={s.buttonbox}>
-                    <button className={s.saveButton} onClick={handleStorage}>Сохранить дату</button>
+                    <button className={s.saveButton} onClick={handleStorage}>Сохранить заметку</button>
                 </div>
             </div>
         </div>
