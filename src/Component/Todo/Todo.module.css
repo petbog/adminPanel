@@ -1,0 +1,12 @@
+.todo{
+    height: 100vh;
+}
+.box{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1px;
+}

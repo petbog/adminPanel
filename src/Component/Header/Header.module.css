@@ -15,8 +15,8 @@
 
 .textBox {
     display: flex;
-    justify-content: flex-start;
-
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .logo {
@@ -32,7 +32,7 @@
     overflow: hidden;
     border-right: 4px solid #77119f;
     animation: flashing-border 0.75s step-end infinite,
-    printed-text 5s steps(11);
+        printed-text 5s steps(11);
 }
 
 @keyframes flashing-border {
@@ -48,8 +48,30 @@
         border-color: #77119f;
     }
 }
-@keyframes printed-text{
-    from{
+
+@keyframes printed-text {
+    from {
         width: 0;
     }
+}
+
+.todoLinl {
+    width: 200px;
+    height: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    background-color: #77119f;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    padding: 13px 64px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.link:hover{
+background-color: #a42dd4;
 }

@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import s from './Header.module.css'
 
 
 const Header = () => {
+    const location = useLocation()
+
+
     return (
         <div className={s.Header}>
             <div className={s.container}>
@@ -10,9 +13,16 @@ const Header = () => {
                     <div className={s.logo}>
                         Admin Panel
                     </div>
-                    <nav className="">
-                        <Link to='todo'>Todo</Link>
-                    </nav>
+                    {
+                        location.pathname !== '/' ?
+                            <nav className={s.todoLinl}>
+                                <Link className={s.link} to='/'>Home</Link>
+                            </nav> :
+                            <nav className={s.todoLinl}>
+                                <Link className={s.link} to='todo'>Todo</Link>
+                            </nav>
+                    }
+
                 </div>
             </div>
 
