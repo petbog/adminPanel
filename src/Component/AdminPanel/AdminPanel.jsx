@@ -12,7 +12,7 @@ const AdminPanel = () => {
     const [text, setText] = useState('')
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(null);
-    const [years, SetYear] = useState('')
+    const [years, SetYear] = useState('Год')
     const [months, SetMonth] = useState([])
     const [dayse, SetDay] = useState([])
     const [hours, SetHour] = useState([])
@@ -169,7 +169,7 @@ const AdminPanel = () => {
                         }
                     </select>
                 </div>
-                <div className={s.dataPic}>
+                {/* <div className={s.dataPic}>
                     <DatePicker
                         selected={startDate}
                         onChange={onChange}
@@ -178,48 +178,8 @@ const AdminPanel = () => {
                         selectsRange
                         inline
                     />
-                </div>
+                </div> */}
                 <div className={s.calendar}>
-                    {/* <p className={s.calendar_title}>Ваша дата </p> */}
-                    {/* {
-                      item.map(({ value,day, hour, month, timeMonth, year, startDate, endDate }, i) =>
-                            <div key={i} className={s.itemContainer}>
-                                <div className={s.valueBox}>{value}</div>
-                                <p className="">{year}</p>
-                                <div className="">
-                                    {
-                                        month.length && month.map((item, i) => <div key={i}>
-                                            <span>{item}</span>
-                                        </div>)
-                                    }
-                                </div>
-                                <div className="">
-                                    {
-                                        day.length && day.map((item, i) => <div key={i}>
-                                            <span>{item}</span>
-                                        </div>)
-                                    }
-                                </div>
-                                <div className="">
-                                    {
-                                        hour.length && hour.map((item, i) => <div key={i}>
-                                            <span>{item} час</span>
-                                        </div>)
-                                    }
-                                </div>
-                                <div className="">
-                                    {
-                                        timeMonth.length && timeMonth.map((item, i) => <div key={i}>
-                                            <span>{item} мин</span>
-                                        </div>)
-                                    }
-                                </div>
-                                <div className={s.dateCalendar}>
-                                    <span>{startDate} {endDate} число</span>
-                                </div>
-                            </div>
-                        )
-                    } */}
                     {
                         <div className={s.itemContainer}>
                             <div className={s.boxText}>{text}</div>
@@ -229,7 +189,7 @@ const AdminPanel = () => {
                                 <div className={s.itemBox}>{hours}</div>
                                 <div className={s.itemBox}>{dayse}</div>
                                 <div className={s.itemBox}>{minut}</div>
-                                <div className={s.itemBox}>{startDate.getDate()} - {endDate !== null ? endDate.getDate() : ''}</div>
+                                {/* <div className={s.itemBox}>{startDate.getDate()} - {endDate !== null ? endDate.getDate() : ''}</div> */}
 
                             </div>
                         </div>

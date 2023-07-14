@@ -23,30 +23,35 @@ const Todo = () => {
             <div className={s.itemTask}>
                 {
                     item.map((data, i) => (
-                        <div key={i} className="">
-                            <div className="">{data.value}</div>
-                            <div className="">{data.year}</div>
-                            {
-                                data.month.map((month, i) => (
-                                    <div key={i} className="">{month}</div>
-                                ))
-                            }
-                            {
-                                data.timeMonth.map((timeMonth, i) => (
-                                    <div key={i} className="">{timeMonth}</div>
-                                ))
-                            }
-                            {
-                                data.day.map((day, i) => (
-                                    <div key={i} className="">{day}</div>
-                                ))
-                            }
-                            {
-                                data.hour.map((hour, i) => (
-                                    <div key={i} className="">{hour}</div>
-                                ))
-                            }
-                            <div className="">{data.startDate}-{data.endDate}</div>
+                        <div key={i} className={s.todoBox}>
+                            <div className={s.value}>
+                                <div className="">{data.value}</div>
+                            </div>
+                            <div className={s.params}>
+                                <div className="">{data.year}</div>
+                                {
+                                    data.month.map((month, i) => (
+                                        <div key={i} className="">{month} </div>
+                                    ))
+                                }
+                                {
+                                    data.timeMonth.map((timeMonth, i) => (
+                                        <div key={i} className="">{timeMonth} число</div>
+                                    ))
+                                }
+                                {
+                                    data.day.map((day, i) => (
+                                        <div key={i} className="">{day} </div>
+                                    ))
+                                }
+                                {
+                                    data.hour.map((hour, i) => (
+                                        <div key={i} className="">{hour} час</div>
+                                    ))
+                                }
+                                {/* <div className="">{data.startDate}-{data.endDate}</div> */}
+                            </div>
+
                         </div>
                     ))
                 }
