@@ -1,0 +1,22 @@
+.todoBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.value {
+    width: 1124px;
+    width: 1124px;
+    font-size: 17px;
+    line-height: 21px;
+    color: #fff;
+    letter-spacing: 1px;
+    min-height: 47px;
+}
+
+.params {
+    display: flex;
+    justify-content: space-between;
+    width: 1124px;
+    color: #fff;
+}
